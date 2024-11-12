@@ -5,6 +5,10 @@ body {
     align-items: center;
 }
 
+.heading{
+    align-self: center;
+}
+
 .outside-container {
     display: flex;
     justify-content: center;
@@ -13,32 +17,40 @@ body {
     padding: 7%;
     margin-top: 8%;
     border-radius: 15%;
-    box-shadow: 10px 10px rgb(207, 207, 207);
+    box-shadow: 10px 10px 5px rgb(124, 124, 124);
 }
 
 .score {
     display: flex;
-    margin-left: 35px;
+    align-self: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .question {
     display: flex;
-    margin-left: 30px;
+    align-self: center;
     color: grey;
 }
 
 .input-container {
     display: flex;
-    margin-left: 10px;
+    align-self: center;
 }
 
 .answer {
     display: flex;
-    margin-top: 15px;
-    margin-left: 35px;
+    align-self: center;
     background-color: rgb(109, 109, 255);
     color: white;
-    margin-right: 40px;
     padding: 10px;
     border-radius: 10px;
+}
+
+.answer:hover {
+    background-color: rgb(59, 47, 92);
+}
+
+
+button {
+    text-decoration: none;
+    border: 1px white;
 }
