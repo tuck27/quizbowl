@@ -1,32 +1,38 @@
-const changeSubmitButton = document.querySelector("#changeSubmitButton");
-const submitButton = document.querySelector("#submit-button");
+let questionList = ["Who won the first SuperBowl?", "What baseball team has won 27 world series?", "What is the name of the trophy awarded to the NHL playoff champion?", "What does NBA stand for?"];
+let answerList = ['Green Bay Packers', 'New York Yankees', 'Stanley Cup', 'National Basketball Association'];
+let score = 0;
+let questionIndex = 0;
+
+const button = document.querySelector(".button-container");
 const input = document.querySelector('#input-field');
-const questionElement = document.querySelector(".question p");
+const question = document.querySelector(".question");
+let scoreContainer = document.querySelector('.score');
 
+question.textContent = questionList[questionIndex];
 
-let questionList = [
-    "Who won the first SuperBowl?",
-    "What baseball team has won 27 world series?",
-    "What is the name of the trophy awarded to the NHL playoff champion?",
-    "What does NBA stand for?"
-]
-questionElement.textContent = questionList[0];
-changeSubmitButton.addEventListener("click", () => {
-    const randomQuestion = questionList[Math.floor(Math.random() * questionList.length)];
-    questionElement.textContent = randomQuestion;
-});
+let submitFunction = () => {
+    button.addEventListener("click", () => {
+        if(input.value === answerList[questionIndex]){
+            questionIndex += 1;
+            score += 1;
+            question.textContent = questionList[questionIndex];
+            scoreContainer.textContent = "Score: " + score;
+        }else{
+            score -= 1;
+            scoreContainer.textContent = "Score: " + score;
+        }
+        //put endgame function here
+        endGame()
+    });
+};
 
-let answerList = [
-    'Green Bay Packers',
-    'New York Yankees',
-    'Stanley Cup',
-    'National Basketball Association'
-]
-questions.textContent = questionList[0];
-input.textContent = answerList[0];
+let endGame = () => {
+    if(questionIndex > 3){
+        scoreContainer.textContent = "Final Score: " + score;
+        question.textContent = "Congratulations, play again!";
+        input.style.display = "none";
+        button.style.display = "none";
 
-if (input === 0){
-    submitButton.addEventListener("click", () => {
-        answerList 
-    })
-}
+    };
+};
+submitFunction()

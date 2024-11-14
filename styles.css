@@ -36,21 +36,21 @@ body {
     align-self: center;
 }
 
-.answer {
+.button-container {
     display: flex;
     align-self: center;
     background-color: rgb(109, 109, 255);
-    color: white;
-    padding: 10px;
+    padding: 12px;
+    margin: 10px;
     border-radius: 10px;
 }
 
-.answer:hover {
+.button-container:hover {
     background-color: rgb(59, 47, 92);
 }
 
 
 button {
     text-decoration: none;
-    border: 1px white;
+    border: 0px white;
 }
