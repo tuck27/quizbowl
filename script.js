@@ -8,6 +8,7 @@ const input = document.querySelector('#input-field');
 const question = document.querySelector(".question");
 let scoreContainer = document.querySelector('.score');
 
+
 question.textContent = questionList[questionIndex];
 
 let submitFunction = () =>{
