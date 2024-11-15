@@ -3,15 +3,15 @@ let answerList = ['Green Bay Packers', 'New York Yankees', 'Stanley Cup', 'Natio
 let score = 0;
 let questionIndex = 0;
 
-const button = document.querySelector(".button-container");
+const button = document.querySelector(".submit");
 const input = document.querySelector('#input-field');
 const question = document.querySelector(".question");
 let scoreContainer = document.querySelector('.score');
 
 question.textContent = questionList[questionIndex];
 
-let submitFunction = () => {
-    button.addEventListener("click", () => {
+let submitFunction = () =>{
+    button.addEventListener('click', () => {
         if(input.value === answerList[questionIndex]){
             questionIndex += 1;
             score += 1;
@@ -24,7 +24,8 @@ let submitFunction = () => {
         //put endgame function here
         endGame()
     });
-};
+}
+
 
 let endGame = () => {
     if(questionIndex > 3){
