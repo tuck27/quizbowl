@@ -4,7 +4,7 @@ let score = 0;
 let questionIndex = 0;
 
 const button = document.querySelector(".submit");
-const input = document.querySelector('#input-field');
+const input = document.querySelector('#name');
 const question = document.querySelector(".question");
 let scoreContainer = document.querySelector('.score');
 
